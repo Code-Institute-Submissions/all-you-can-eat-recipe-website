@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }} <br>
+        {{ recipe.category_name }} <br>
+        {{ recipe.description }} <br>
+        {{ recipe.category_name }} <br>
+        {{ recipe.is_vegan }} <br>
+        {{ recipe.is_gluten_free }} <br>
+        {{ recipe.ingredients[0] }} <br>
+        {{ recipe.ingredients[1] }} <br>
+        {{ recipe.ingredients[2] }} <br>
+        {{ recipe.ingredients[3] }} <br>
+        {{ recipe.ingredients[4] }} <br>
+        {{ recipe.ingredients[5] }} <br>
+        {{ recipe.ingredients[6] }} <br>
+        {{ recipe.ingredients[7] }} <br>
+        {{ recipe.ingredients[8] }} <br>
+        {{ recipe.ingredients[9] }} <br>
+        {{ recipe.ingredients[10] }} <br>
+        {{ recipe.ingredients[11] }} <br>
+        {{ recipe.ingredients[12] }} <br>
+        {{ recipe.ingredients[13] }} <br>
+        {{ recipe.ingredients[14] }} <br>
+        {{ recipe.instructions[0] }} <br>
+        {{ recipe.instructions[1] }} <br>
+        {{ recipe.instructions[2] }} <br>
+        {{ recipe.instructions[3] }} <br>
+    {% endfor %}
+</body>
+
+</html>
