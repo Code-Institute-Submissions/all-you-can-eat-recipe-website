@@ -18,6 +18,7 @@
 }
 
 #register-username,
-#register-password {
+#register-password,
+#profile-heading {
     color: #00897b;
 }
