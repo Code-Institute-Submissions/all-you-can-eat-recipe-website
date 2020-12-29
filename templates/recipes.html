@@ -1,30 +1,93 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    {% for recipe in recipes %}
-        {{ recipe.category_name }} <br>
-        {{ recipe.recipe_name }} <br>
-        {{ recipe.recipe_description }} <br>
-        {{ recipe.is_vegan }} <br>
-        {{ recipe.is_gluten_free }} <br>
-        {{ recipe.ingredients[0] }} <br>
-        {{ recipe.ingredients[1] }} <br>
-        {{ recipe.ingredients[2] }} <br>
-        {{ recipe.ingredients[3] }} <br>
-        {{ recipe.ingredients[4] }} <br>
-        {{ recipe.ingredients[5] }} <br>
-        {{ recipe.ingredients[6] }} <br>
-        {{ recipe.ingredients[7] }} <br>
-        {{ recipe.ingredients[8] }} <br>
-        {{ recipe.ingredients[9] }} <br>
-        {{ recipe.ingredients[10] }} <br>
-        {{ recipe.ingredients[11] }} <br>
-        {{ recipe.ingredients[12] }} <br>
-        {{ recipe.ingredients[13] }} <br>
-        {{ recipe.ingredients[14] }} <br>
-        {{ recipe.instructions[0] }} <br>
-        {{ recipe.instructions[1] }} <br>
-        {{ recipe.instructions[2] }} <br>
-        {{ recipe.instructions[3] }} <br>
+
+
+{% for recipe in recipes %}
+<div class="row">
+
+    <div class="col s12 ">
+
+        <div class="card">
+            <div class="center-align card-heading">
+                <h2 class="heading"><strong>{{ recipe.recipe_name }} </strong></h2>
+                <p class="text-shadow"><strong>{{ recipe.category_name }}</strong></p>
+                <span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="fas fa-plus"></i></a>
+                </span>
+            </div>
+            <h5 class="center-align">{{ recipe.recipe_description }}</h5>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 m4 offset-m4 offset-m4">
+                        <div class="card-panel grey lighten-5">
+                            {% if recipe.is_vegan == "on" %}
+                            <strong>
+                                <h6 class="center-align"><i class="fas fa-leaf green-text"> Vegan</i></h6>
+                            </strong>
+                            {% else %}
+                            <strong>
+                                <h6 class="center-align"><i class="fas fa-paw red-text"> May Contain Animal Products</i>
+                                </h6>
+                            </strong>
+                            {% endif %}
+                            {% if recipe.is_gluten_free == "on" %}
+                            <strong>
+                                <h6 class="center-align"><i class="fas fa-ban brown-text"> Gluten Free</i></h6>
+                            </strong>
+                            {% else %}
+                            <strong>
+                                <h6 class="center-align"><i class="fas fa-bread-slice red-text"> May Contain Gluten</i>
+                                </h6>
+                            </strong>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="center-align heading">Ingredients:</h4>
+                <div class="row">
+                    <div class="col s12 m8 offset-m2 offset-m2">
+                        <div class="card-panel teal lighten-4">
+                            <span>
+                                <ul>
+                                    <li>{{ recipe.ingredients[0] }} </li>
+                                    <li>{{ recipe.ingredients[1] }} </li>
+                                    <li>{{ recipe.ingredients[2] }} </li>
+                                    <li>{{ recipe.ingredients[3] }} </li>
+                                    <li>{{ recipe.ingredients[4] }} </li>
+                                    <li>{{ recipe.ingredients[5] }} </li>
+                                    <li>{{ recipe.ingredients[6] }} </li>
+                                    <li>{{ recipe.ingredients[7] }} </li>
+                                    <li>{{ recipe.ingredients[8] }} </li>
+                                    <li>{{ recipe.ingredients[9] }} </li>
+                                    <li>{{ recipe.ingredients[10] }} </li>
+                                    <li>{{ recipe.ingredients[11] }} </li>
+                                    <li>{{ recipe.ingredients[12] }} </li>
+                                    <li>{{ recipe.ingredients[13] }} </li>
+                                    <li>{{ recipe.ingredients[14] }} </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h4 class="center-align heading">Instructions:</h4>
+
+                <ol>
+
+                    <li>{{ recipe.instructions[0] }}</li>
+                    <li>{{ recipe.instructions[1] }}</li>
+                    <li>{{ recipe.instructions[2] }}</li>
+                    <li>{{ recipe.instructions[3] }}</li>
+
+                </ol>
+
+
+            </div>
+        </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}
