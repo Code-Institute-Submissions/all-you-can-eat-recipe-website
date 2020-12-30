@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="center-align heading">All Recipes</h3>
+
 
 {% for recipe in recipes %}
 <div class="row">
@@ -9,13 +11,14 @@
 
         <div class="card">
             <div class="center-align card-heading">
-                <h2 class="heading"><strong>{{ recipe.recipe_name }} </strong></h2>
+                <h2 class="heading recipe-heading"><strong>{{ recipe.recipe_name }} </strong></h2>
                 <p class="text-shadow"><strong>{{ recipe.category_name }}</strong></p>
                 <span>
                     <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="fas fa-plus"></i></a>
                 </span>
             </div>
             <h5 class="center-align">{{ recipe.recipe_description }}</h5>
+            <p class="center-align"><em>by: {{ recipe.created_by }}</em></p>
             <div class="card-content">
                 <div class="row">
                     <div class="col s12 m4 offset-m4 offset-m4">
