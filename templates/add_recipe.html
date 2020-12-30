@@ -2,21 +2,128 @@
 {% block content %}
 
 <h3 class="center-align heading">Add a New Recipe</h3>
-<div class="row">
+<div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="">
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-user-circle  teal-text prefix ">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">First Name</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-phone teal-text prefix">account_circle</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone</label>
+                <i class="fas fa-pencil-alt  teal-text prefix "></i>
+                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
-    </form>
-</div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left teal-text prefix"></i>
+                <textarea id="recipe_description" class="materialize-textarea validate" minlength="5" maxlength="200"
+                    required></textarea>
+                <label for="recipe_description">Recipe Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-leaf teal-text prefix"></i>
+                    <label for="is_vegan">
+                        <input type="checkbox" id="is_vegan">
+                        <span class="lever"></span>
+                        Vegan
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-bread-slice teal-text prefix"></i>
+                    <label for="is_gluten_free">
+                        <input type="checkbox" id="is_gluten_free">
+                        <span class="lever"></span>
+                        Gluten-Free
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[0]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[0]">Ingredient 1</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[1]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[1]">Ingredient 2</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[2]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[2]">Ingredient 3</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[3]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[3]">Ingredient 4</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[4]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[4]">Ingredient 5</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[5]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[5]">Ingredient 6</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[6]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[6]">Ingredient 7</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[7]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[7]">Ingredient 8</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[8]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[8]">Ingredient 9</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[9]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[9]">Ingredient 10</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[10]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[10]">Ingredient 11</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[11]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[11]">Ingredient 12</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="fas fa-seedling teal-text prefix"></i>
+                <textarea id="ingredients[12]" class="materialize-textarea validate" minlength="5" maxlength="50"
+                    required></textarea>
+                <label for="ingredients[12]">Ingredient 13</label>
+            </div>
 
-{% endblock %}
+        </div>
+
+        {% endblock %}
