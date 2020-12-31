@@ -14,7 +14,12 @@
                 <h2 class="heading recipe-heading"><strong>{{ recipe.recipe_name }} </strong></h2>
                 <p class="text-shadow"><strong>{{ recipe.category_name }}</strong></p>
                 <span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="fas fa-plus"></i></a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="fas fa-trash-alt"></i></a>
+                </span>
+                <span>
+                    <a id="floating-btn-edit" class="btn-floating halfway-fab waves-effect waves-light grey"><i
+                            class="fas fa-edit"></i></a>
                 </span>
             </div>
             <h5 class="center-align">{{ recipe.recipe_description }}</h5>
