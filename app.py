@@ -80,7 +80,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # get the sessions users username from the database and display it on the profile page
+    """
+    get the sessions users username from the database
+    and display it on the profile page
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -157,6 +160,20 @@ def delete_recipe(recipe_id):
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name"),
+            "category_description": request.form.get("category_description")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("get_categories"))
+
+    return render_template("add_category.html")
 
 
 if __name__ == "__main__":
