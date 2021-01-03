@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="center-align heading">Manage Categories</h2>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col s12 m6">
+        <div class="card grey lighten-5 center-align">
+            <div class="card-content">
+                <span class="card-title"><strong>{{ category.category_name }}</strong></span>
+                <p>{{ category.category_description }}</p>
+            </div>
+            <div class="card-action center-align">
+                <a class="btn-floating btn waves-effect waves-light grey"><i class="fas fa-edit"></i></a>
+                <a class="btn-floating btn waves-effect waves-light red"><i class="fas fa-trash-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

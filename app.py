@@ -78,7 +78,7 @@ def login():
     return render_template("login.html")
 
 
-@ app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # get the sessions users username from the database and display it on the profile page
     username = mongo.db.users.find_one(
@@ -152,6 +152,11 @@ def delete_recipe(recipe_id):
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":
