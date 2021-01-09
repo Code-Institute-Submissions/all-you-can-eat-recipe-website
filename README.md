@@ -27,20 +27,34 @@ In this section, you should go over the different parts of your project, and des
 7. Users can add up to 13 ingredients & up to 6 instructions
 
 
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+### Features Left to Implement
+1. Display users created recipes onto their profile page
+2. Add a save button so users can save the recipes of others and display it on their profile page
+3. Add a feature where users can select admin rights and add a admin password to get granted admin usage rights
+4. Add a button that allows users to click a button to generate more ingredient & instructions fields
+5. Allow users to search by meal preferences ie "vegan", "paleo" etc#
+6. Allow users to add their email address, name & surname to their profile
 
-Features Left to Implement
-Another feature idea
-Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+# Technologies Used
+* HTML
+    * Used for the website structure
+* CSS 
+    * Used to style specific components of the website
+* Materialize
+    * Used for styling of the components such as nav bars, cards, forms and headings
+* JQuery 
+    * Used to manipulate the DOM and add functionality to Materialize components 
+* Python
+    Used for the back end and to manipulate & store data
+* Flask & Jinja Templating Language
+    Used as a framework for Python & to dymanically add hmtl pages, for loops & if statements into html pages
+* MongoDB
+    Used to store data 
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
+Where you left off
+
+## Testing 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
