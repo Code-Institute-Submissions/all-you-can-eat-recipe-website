@@ -12,7 +12,12 @@ This website was designed with a few types of users in mind. You can find the us
 * As a user who enjoys cooking, I want to explore other peoples recipes and get inspiration
 * As a professional chef, I want to be able to store my recipes, display them and allow other people to make them
 
-# (wireframes to be uploaded here)
+### Wireframes
+![Add recipe](/imgs/addrecipe.png)
+![Home](/imgs/home.png)
+![Login](/imgs/login.png)
+![Register](/imgs/register.png)
+
 
 
 ## Features
@@ -37,55 +42,70 @@ In this section, you should go over the different parts of your project, and des
 6. Allow users to add their email address, name & surname to their profile
 
 # Technologies Used
-* HTML
+* [HTML](https://html.com/)
     * Used for the website structure
-* CSS 
+* [CSS](https://purecss.io/)
     * Used to style specific components of the website
-* Materialize
+* [Materialize](https://materializecss.com/)
     * Used for styling of the components such as nav bars, cards, forms and headings
-* JQuery 
+* [JQuery](https://jquery.com/)
     * Used to manipulate the DOM and add functionality to Materialize components 
-* Python
+* [Python](https://www.python.org/doc/)
     Used for the back end and to manipulate & store data
-* Flask & Jinja Templating Language
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) & Jinja Templating Language
     Used as a framework for Python & to dymanically add hmtl pages, for loops & if statements into html pages
-* MongoDB
+* [MongoDB](https://www.mongodb.com)
     Used to store data 
 
-Where you left off
+
 
 ## Testing 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+* HTML Validator
+    * Passed all HTML Validator tests. The only errors that occured were due to the Jinga Templating language being used within the HTML document
+* CSS Validator
+    * No errors were found in the style.css file
+* JSHint
+    * No errors were found in the script.js file however, there were warnings due to the use of JQuery
+* PEP8 online check
+    * No errors found in the Python code
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+* Contact form:
+    * Navigated to the contact form & tried to submit without required data and it showed errors for missing data
+* Add Recipe Form:
+    * Navigated to the add recipe form & tried to submit without required data and it showed errors for missing data
+* Registeration Page:
+    * Tried to create a username twice and it gave me an error. 
+    * Tried to create a password that was blank or short and it gave me an error
+    * Tried to submit the form without data and it gave me an error
+* Login Page:
+    * Tried to submit the form blank and it gave me an error
+    * Tried to submit without password/ username and it gave me an error
+* I also created the website with Materialize which allows users to have responsiveness on a variety of different browswers and devices. I tested this with chrome developer tools by changing the screen size as well as selected the targeted screen size.
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+## Deployment
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+For deployment on Heroku:
+* Create a requir.txt file using the command "python3 -m pip freeze --local > requirements.txt" in the terminal
+* Create a Procfile using entering the command "echo web: python app.py > Procfile"
+* Add, commit & push changes to the GitHub repository.
+* On the Heroku website, create a new app, set the name and select the region that is closest to you. I selected Germany
+* Set the deployment method to GitHub and link the repository to the Heroku Application
+* Go to the settings and navigate to reveal config in and set the values as follows
+    * IP: 0.0.0.0
+    * MONGO_URI: mongodb+srv://:@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority
+    * PORT: 5000
+    * SECRET: <your_secret_key>
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+## Credits
+### Content
+The recipes were mostly copied from [It doesn't taste like chicken](https://itdoesnttastelikechicken.com/)
+For color scheme [Color pallette](https://coolors.co/)
+For design & layout [Materialize](https://materializecss.com/)
+Wireframes [Balsamiq](https://balsamiq.com/wireframes/desktop/#)
 
-Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
-Credits
-Content
-The text for section Y was copied from the Wikipedia article Z
-Media
-The photos used in this site were obtained from ...
-Acknowledgements
-I received inspiration for this project from X
+### Acknowledgements
+Code Institute mini project
+Materialize for style ideas
+Brad Traversy's [Flask Crash Course](https://www.youtube.com/watch?v=zRwy8gtgJ1A)
+Free Code Camp's [Flask Crash Course](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
