@@ -1,5 +1,7 @@
 ## All You Can Eat Recipe Website
-All You Can Eat Recipe Website is my Milestone 3 project. It is a website where users can search for, upload and store recipes that they would like to use in the future. It covers all the main meals of the day (breakfast, lunch, dessert & dinner) as well as a catch all category of snacks.
+All You Can Eat Recipe Website is my Milestone 3 project for my course with Code Institute.
+_**Please note that this website is for educational purposes only.**_
+ It is a website where users can search for, upload and store recipes that they would like to use in the future. It covers all the main meals of the day (breakfast, lunch, dessert & dinner) as well as a catch all category of snacks.
 
 Users are also able to search through the website for keywords in the text in order for them to discover new recipes that they might like. It also has a display box to show if it contains gluten and if it is vegan or not.
 
